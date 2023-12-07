@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FaceSnap } from 'src/models/face-snap.model';
+import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../services/face-snape.service';
-@Component({
-  selector: 'app-face-snap',
-  templateUrl: './face-snap.component.html',
-  styleUrls: ['./face-snap.component.scss']
-})
-export class FaceSnapComponent implements OnInit {
 
+@Component({
+  selector: 'app-single-face-snap',
+  templateUrl: './single-face-snap.component.html',
+  styleUrls: ['./single-face-snap.component.scss']
+})
+export class SingleFaceSnapComponent {
   faceSnap!:FaceSnap;
   buttonText !:string;
   
@@ -34,7 +34,6 @@ export class FaceSnapComponent implements OnInit {
       this.buttonText="Oh Snap!";
 
     }
-  
   }
 
 }

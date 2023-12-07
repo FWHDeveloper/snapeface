@@ -2,15 +2,4 @@
       <h2>{{ faceSnap.title |titlecase}}</h2>
       <p>Mis en ligne {{ faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy' }}</p>          <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{ faceSnap.description }}</p>
-    <p *ngIf="faceSnap.location === 'Paris'">Photo prise à {{faceSnap.location}}</p>
-    <p>
-        <button (click)="onSnap()">{{buttonText}}</button>
-      <span [ngStyle]="{color: 'rgb(0, ' + faceSnap.snaps + ', 0)'}">  {{ faceSnap.snaps }}</span>
-    </p>
-    <p>{{ 4346234.36 | number}}</p>
-    <p>{{ 0.336 | percent }}</p>
-    <p>{{ 0.336 | percent: '1.0-1' }}</p>
-    <p>{{ 344.36 | currency }}</p>
-    <p>{{ 344.36 | currency: 'EUR' : 'code' }}</p>      </div>
-  <!-- <img src="{{ imageUrl }}" alt="{{ title }}"--> <!--j'ai insérer la  valeur d'une propriété ts ds le template -->
-  <!--<img [src]="imageUrl" alt="{{title}}" --><!--j'ai lier la valeur de la propriété Ts à un attribut HTML-->
+</div>
