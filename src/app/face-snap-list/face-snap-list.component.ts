@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
-import { FaceSnap } from 'src/models/face-snap.model';
-import { FaceSnapsService } from '../services/face-snape.service'
+
+import { Component, OnInit } from '@angular/core';
+import { FaceSnap } from '../models/face-snap.model';
+import { FaceSnapsService } from '../services/face-snape.service';
+
 @Component({
   selector: 'app-face-snap-list',
   templateUrl: './face-snap-list.component.html',
-  styleUrls: ['./face-snap-list.component.scss'],
+  styleUrls: ['./face-snap-list.component.scss']
 })
-export class FaceSnapListComponent {
+export class FaceSnapListComponent implements OnInit {
+
   faceSnaps!: FaceSnap[];
-  constructor(private faceSnapService:FaceSnapsService){}
-  ngOnInit() {
-    this.faceSnaps = this.faceSnapService.faceSnaps;
+
+  constructor(private faceSnapsService: FaceSnapsService) { }
+
+  ngOnInit(): void {
+    this.faceSnaps = this.faceSnapsService.getAllFaceSnaps();
   }
+
 }
